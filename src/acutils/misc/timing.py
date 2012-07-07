@@ -1,4 +1,5 @@
 import time
+
         
 def timeit(func, *args, **kwargs):
     t0 = time.clock()
