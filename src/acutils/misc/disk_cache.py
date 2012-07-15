@@ -1,4 +1,6 @@
-import os, cPickle as pickle
+import os
+import cPickle as pickle
+
 
 def disk_cache(func):
     # Processes a file or directory, caching results 
