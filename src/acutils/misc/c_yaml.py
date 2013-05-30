@@ -1,9 +1,10 @@
 ''' Fast routines to yaml reading and writing. '''
-from . import contract, logger
-from contracts import describe_type
+
+from contracts import contract, describe_type
 from pprint import pprint
 from types import NoneType
 from yaml import load, dump
+import numpy as np
 
 try:
     from yaml import CLoader as Loader, CDumper as Dumper
@@ -26,7 +27,7 @@ def yaml_load(yaml_string):
 
 
 def dump_emergency_string(s):
-    emergency = '/home/andrea/yaml_load.yaml' # XXX FIXME
+    emergency = '/home/andrea/yaml_load.yaml'  # XXX FIXME
     with open(emergency, 'w') as f:
         f.write(s)
     logger.error('String written to %r.' % emergency)
